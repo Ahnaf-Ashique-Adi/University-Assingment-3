@@ -1,0 +1,373 @@
+1)import java.util.Scanner;
+  public class Task1
+{ public static void main (String[]args)
+  { Scanner sc =new Scanner(System.in);
+  System.out.println("Enter the first number: ");
+  int n1=sc.nextInt();
+  System.out.println("Enter the second number: ");
+  int n2=sc.nextInt();
+  System.out.println("Enter the third number: ");
+  int n3=sc.nextInt();
+  if (n1>n2 && n1>n3){
+    System.out.println("Largest number: "+n1);
+  
+  }
+  else if(n2>n1 && n2>n3){
+    System.out.println("Largest number: "+n2);
+  
+  }
+  else{System.out.println("Largest number: "+n3);
+  
+  }
+ }
+
+}
+
+2)import java.util.Scanner;
+public class Task2
+{ public static void main (String[]args)
+  { Scanner sc =new Scanner(System.in);
+  String grade;
+  System.out.println("Enter the score : "); 
+  int score= sc.nextInt();
+  if(score>=90 && score<=100){
+    grade="A";
+  
+  }
+  else if(score>= 85 && score<=89){
+      grade="A-";
+  } 
+  else if (score>=70 && score<=84){
+  grade="B";
+  }
+  else if (score>=57 && score<=69){
+  grade="C";
+  }
+  else if (score>=50 && score<=56){
+  grade="D";
+  }
+  else {
+  grade="F";
+  }
+  System.out.println("Your grade is "+grade);
+  }
+ }
+
+3)import java.util.Scanner;
+public class Task3
+{ public static void main(String[]args)
+  {   Scanner sc = new Scanner(System.in);
+  System.out.println("Enter an integer: ");
+ int n1=sc.nextInt();
+ System.out.println("Enter another integer: ");
+ int n2=sc.nextInt();
+ System.out.println("Enter the operator :");
+ String operator=sc.next();
+ if(operator.equals("+")){
+ int sum =n1+n2;
+   System.out.println("Sum is : "+sum);
+ }
+ else if (operator.equals("-")){
+  int dif =n1-n2;
+  System.out.println("Difference is : "+dif);
+   
+ 
+ }
+ else if (operator.equals("*")){  
+   int mul=n1*n2;
+   System.out.println("Multiplication is : "+mul);
+ }
+ else if (operator.equals("/")){
+   int div=n1/n2;
+   System.out.println("Division is : "+div);
+ }
+
+
+}
+
+}
+
+4)import java.util.Scanner;
+public class Task4
+{ public static void main(String[]args)
+  {   Scanner sc = new Scanner(System.in);
+    System.out.println("Enter an integer");
+  int n1=sc.nextInt();
+ if (n1%5==0 && n1%7==0){
+   System.out.println("Divisible by Both");
+ 
+ }
+ else if (n1%5==0  && n1%7!=0){
+ System.out.println("Invalid: Divisible by 5 Only");
+ 
+ }
+else if (n1%5!=0 && n1%7==0)
+{ System.out.println("Invalid: Divisible by 7 Only");
+ }
+else {
+System.out.println("No");
+   }
+  }
+}
+
+5)import java.util.Scanner;
+public class Task5
+{   public static void main(String[]args)
+  {    Scanner sc =new Scanner(System.in);
+     System.out.println("Enter a year: ");
+     int year=sc.nextInt();
+     if(year%4==0 && year%100!=0)  
+     {  System.out.println(year+" is a leap year");
+       
+     }
+     else if (year%100==0 && year %400==0){
+        System.out.println(year+" is a leap year");
+     
+     }
+else { System.out.println(year+" is not a leap year"); }
+
+  }
+
+}
+
+6)import java.util.Scanner;
+public class Task6
+{   public static void main(String[]args)
+  {    Scanner sc =new Scanner(System.in);
+     System.out.println("Enter an integer");
+     int n1=sc.nextInt();
+     if (n1<0){System.out.println("Number is negative");
+     }
+   else  if (n1==0){ System.out.println("Number is zero");
+     }
+      else if (n1>0 && n1%2==0){System.out.println("Number is positive and even");
+        
+     }
+      else {
+        System.out.println("Number is positive and odd");       
+      
+      
+      }     
+     
+  }
+}
+7)import java.util.Scanner;
+public class Task7
+{   public static void main(String[]args)
+  {    Scanner sc =new Scanner(System.in);
+     System.out.println("Enter the value of x: ");
+     int n1=sc.nextInt();
+     int function=0;
+     if (n1<0){
+       function=2*n1;
+     }
+     else if (n1>=0 && n1<2 ){
+     function=n1+1;
+     }
+     else if (n1>=2 && n1<5){
+     function=(n1*n1)-1;
+     }
+     else{
+     function=3*(n1*n1)+2;
+     }
+  System.out.println("output: "+function);
+       }
+
+  }
+
+
+
+8)import java.util.Scanner;
+public class Task8
+{   public static void main(String[]args)
+  {    Scanner sc =new Scanner(System.in);
+   System.out.println("Enter BRACU student ID");
+  int student_id=sc.nextInt();
+    int first_two_digit=(student_id)/1000000;
+    int first_three_digit=(student_id)/100000;
+    int third_digit=first_three_digit%10;
+    String session;
+    if(third_digit==1){
+     session= "Spring";
+    System.out.println("Student Joined BRAC in "+session+" "+first_two_digit);
+    }
+    else if(third_digit==2){
+       session="Fall";
+       
+    System.out.println("Student Joined BRAC in "+session+" "+first_two_digit);
+    }
+    else{
+    session="Summer";
+    System.out.println("Student Joined BRAC in "+session+" "+first_two_digit);
+    }
+  }
+
+}
+
+9)import java.util.Scanner;
+public class Task9
+{public static void main(String[]args){
+  Scanner sc =new Scanner(System.in);
+  System.out.println("Enter your payment: ");
+  int payment=sc.nextInt();
+  System.out.println("Enter your age: ");
+  int age=sc.nextInt();
+  double tax;
+ 
+  if(age>=18)
+  {
+     if(payment<10000)
+     {
+     tax=0 ;
+     System.out.println("Your tax amount in "+(int)tax+" TK"); }
+    else if(payment>=10000 && payment<=20000){ 
+    tax=(5.0/100)*payment ;
+     System.out.println("Your tax amount in "+(int)tax+" TK");  }
+    else if(payment>20000) {
+     tax=(10.0/100)*payment ;  
+     System.out.println("Your tax amount in "+(int)tax+" TK");  }
+     } 
+   else{
+    tax=0;
+     
+      System.out.println("Your tax amount in "+(int)tax+" TK");  }
+  }
+}
+
+
+10)import java.util.Scanner;
+public class Task10
+{
+  public static void main(String[]args)
+  {
+  Scanner sc= new Scanner(System.in);
+  System.out.println("Enter a float number");
+  float num1=sc.nextFloat();
+    System.out.println("Enter a float number");
+  float num2=sc.nextFloat();
+  System.out.println("Enter a float number");
+    float num3=sc.nextFloat();
+    if(num1>num2 && num1>num3)
+    {if(num2<num1 && num2<num3)
+      {System.out.println("Maximum number is "+num1);
+      System.out.println("Minimum number is "+num2);}
+    else{System.out.println("Maximum number is "+num1);
+   System.out.println("Minimum number is "+num3);
+    } }
+else if(num2>num3 && num2>num1) 
+{if(num3<num1 && num3<num2)
+      {System.out.println("Maximum number is "+num2);
+      System.out.println("Minimum number is "+num3);}
+    else{System.out.println("Maximum number is "+num2);
+   System.out.println("Minimum number is "+num1);
+   
+    } }
+else if (num3>num2 && num3>num1)
+  {if(num1<num3 && num1<num2)
+      {System.out.println("Maximum number is "+num3);
+      System.out.println("Minimum number is "+num1);}
+    else{System.out.println("Maximum number is "+num3);
+   System.out.println("Minimum number is "+num2);
+   
+    } }
+  }
+}
+
+
+
+11)import java.util.Scanner;
+public class Task11
+{  public static void main(String[]args)
+  { Scanner sc= new Scanner(System.in);
+    System.out.println("Enter one side:");
+    int a=sc.nextInt();
+    System.out.println("Enter another side:");
+    int b=sc.nextInt();
+    System.out.println("Enter the last side:");
+    int c=sc.nextInt();
+    if(a==b && b==c)
+    {System.out.println("This is a Equilateral triangle "); }
+    else if(a==b && b!=c)
+    {System.out.println("This is a Isosceles triangle"); }
+    else if (a!=b && b==c)
+    {System.out.println("This is a Isosceles triangle");}
+    else if(a==c && (b!=a || b!=c))
+    {System.out.println("This is a Isosceles triangle"); }
+   else if (a!=b && b!=c)
+   {System.out.println("This is a Scalene triangle");}
+  }
+}
+
+
+
+
+12)  import java.util.Scanner;
+public class Task12
+{ public static void main(String[]args)
+  { Scanner sc= new Scanner(System.in);
+    System.out.print("Enter the amount the customer need to be pay(Taka): ");
+     int amount_to_be_paid=sc.nextInt();
+     System.out.print("Enter the amount, customer gave(Taka): ");
+     int amount_given=sc.nextInt();
+     if(amount_given<amount_to_be_paid)
+     {int extra=(amount_to_be_paid-amount_given);
+     System.out.println("Please pay "+extra+ " taka more.");}
+     else if(amount_to_be_paid==amount_given)
+     {int change=amount_given-amount_to_be_paid;
+     System.out.println("The returned amount is " +change+" taka.");}
+     else{ 
+       int change = amount_given-amount_to_be_paid;
+     System.out.println("The returned amount is: " + change + " taka.");
+     
+     int hundred_note=change/100;
+     int remainder=change%100;
+     int fifty_note=remainder/50;
+     remainder = remainder%50;
+     int twenty_note= remainder/20;
+     remainder= remainder%20;
+     int ten_note=remainder/10;
+     remainder = remainder%10;
+     int five_coin = remainder/5;
+     remainder =remainder%5;
+     int two_coin= remainder/2;
+     remainder=remainder%2;
+     int one_coin =remainder/1;
+     remainder =remainder%1;
+     
+      System.out.println("100 taka note: " + hundred_note);
+            System.out.println("50 taka note: " +  fifty_note);
+            System.out.println("20 taka note: " + twenty_note);
+            System.out.println("10 taka note: " + ten_note);
+            System.out.println("5 taka coin: " + five_coin);
+            System.out.println("2 taka coin: " + two_coin);
+            System.out.println("1 taka coin: " +one_coin);
+     
+     }
+
+
+  }
+}
+   
+
+
+
+
+13)import java.util.Scanner;
+public class Task13
+{public static void main(String[]args)
+  {Scanner sc= new Scanner(System.in);
+    System.out.println("Input the 1st number:");
+    int n1=sc.nextInt();
+    System.out.println("Input the 2nd number: ");
+    int n2=sc.nextInt();
+    System.out.println("Input the 3rd number:");
+    int n3=sc.nextInt();
+    if(n1==n2 && n2==n3 && n3==n1)
+    {System.out.println("All numbers are equal");}
+    else if (n1!=n2 && n2!=n3 &&n3!=n1)
+    {System.out.println("All numbers are different ");}
+    else if ((n1==n2 && n2!=n3) || (n2==n3 && n1!=n2) || (n1==n3 && n2!=n1))
+    {System.out.println("Neither all are equal or different");}
+  }
+}
+
